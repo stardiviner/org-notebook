@@ -164,6 +164,7 @@
 						     ".png"
 						     )
 				))))
+    (unless (file-directory-p "./img") (make-directory "./img"))
     (insert (concat "[[" org-notebook-image-filepath "]]"))
     (start-process "org-notebook-drawing" nil org-notebook-drawing-program org-notebook-image-filepath)
   ))
